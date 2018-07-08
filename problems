@@ -1,0 +1,204 @@
+Executing task: C:\Users\chinna\.platformio\penv\Scripts\platformio.exe run <
+
+The terminal process terminated with exit code: 1
+
+Terminal will be reused by tasks, press any key to close it.
+Processing id107 (platform: nordicnrf51; board: id107; framework: arduino)
+-------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+PLATFORM: Nordic nRF51 > id107
+SYSTEM: NRF51822 16MHz 32KB RAM (256KB Flash)
+DEBUG: CURRENT(blackmagic) EXTERNAL(blackmagic, jlink, stlink)
+Converting KX022_getAcc_changed.ino
+Warning! Cannot find an appropriate softdevice binary!
+Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF MODES: FINDER(chain) COMPATIBILITY(soft)
+Collected 7 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <Squix78 OLED library> 3.2.8
+|   |-- <SPI> 1.0
+|   |-- <Wire> 1.0
+|-- <SPI> 1.0
+|-- <arduino-BLEPeripheral>
+|   |-- <SPI> 1.0
+|-- <Wire> 1.0
+|-- <SI1143_Pulse_Prox_Sensors-master>
+|-- <KX022>
+|   |-- <Wire> 1.0
+Compiling .pioenvs\id107\src\KX022_getAcc_changed.ino.cpp.o
+Compiling .pioenvs\id107\liba3d\arduino-BLEPeripheral\BLEBondStore.cpp.o
+Compiling .pioenvs\id107\liba3d\arduino-BLEPeripheral\BLECentral.cpp.o
+Compiling .pioenvs\id107\liba3d\arduino-BLEPeripheral\BLECharacteristic.cpp.o
+In file included from lib\squix78_OLED/SSD1306Spi.h:37:0,
+from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_ge
+tAcc_changed.ino:11:
+lib\squix78_OLED/OLEDDisplay.h: In member function 'void OLEDDisplay::drawString
+Internal(int16_t, int16_t, char*, uint16_t, uint16_t)':
+lib\squix78_OLED/OLEDDisplay.h:807:11: warning: enumeration value 'TEXT_ALIGN_LE
+FT' not handled in switch [-Wswitch]
+switch (textAlignment)
+^
+lib\squix78_OLED/OLEDDisplay.h: In member function 'void OLEDDisplay::drawIntern
+al(int16_t, int16_t, int16_t, int16_t, const char*, uint16_t, uint16_t)':
+lib\squix78_OLED/OLEDDisplay.h:1237:15: warning: unused variable 'yScreenPos' [-
+Wunused-variable]
+int16_t yScreenPos = yMove + yOffset;
+^~~~~~~~~~
+In file included from lib\squix78_OLED/SSD1306Spi.h:38:0,
+from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_ge
+tAcc_changed.ino:11:
+lib\squix78_OLED/OLEDDisplay_SPI.h: In member function 'bool OLEDDisplay::connec
+t(uint32_t)':
+lib\squix78_OLED/OLEDDisplay_SPI.h:51:11: error: 'MOSI' was not declared in this
+ scope
+pinMode(MOSI, OUTPUT);
+^~~~
+lib\squix78_OLED/OLEDDisplay_SPI.h:51:11: note: suggested alternative: 'M_PI'
+pinMode(MOSI, OUTPUT);
+^~~~
+M_PI
+lib\squix78_OLED/OLEDDisplay_SPI.h:52:11: error: 'SCK' was not declared in this
+scope
+pinMode(SCK, OUTPUT);
+^~~
+lib\squix78_OLED/OLEDDisplay_SPI.h:52:11: note: suggested alternative: 'SCB'
+pinMode(SCK, OUTPUT);
+^~~
+Compiling .pioenvs\id107\liba3d\arduino-BLEPeripheral\BLEConstantCharacteristic.
+cpp.o
+SCB
+In file included from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-i
+d107/src/KX022_getAcc_changed.ino:13:0:
+lib\SI1143_Pulse_Prox_Sensors-master/SI114.h: In member function 'uint8_t Device
+I2C::setAddress(uint8_t)':
+lib\SI1143_Pulse_Prox_Sensors-master/SI114.h:244:27: warning: no return statemen
+t in function returning non-void [-Wreturn-type]
+{ addr = me << 1; }
+^
+In file included from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-i
+d107/src/KX022_getAcc_changed.ino:13:0:
+lib\SI1143_Pulse_Prox_Sensors-master/SI114.h: In member function 'byte Scheduler
+::idle(byte)':
+lib\SI1143_Pulse_Prox_Sensors-master/SI114.h:291:47: warning: promoted ~unsigned
+ is always non-zero [-Wsign-compare]
+byte idle(byte task) { return tasks[task] == ~0; }
+~~~~~~~~~~~~^~~~~
+C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_
+changed.ino: In function 'void loop()':
+C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_
+changed.ino:279:15: warning: overflow in implicit constant conversion [-Woverflo
+w]
+/* Serial.print("PART: ");
+^~~~~~~~~~
+In file included from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-i
+d107/src/KX022_getAcc_changed.ino:9:0:
+lib\KX022/KX022.h: In instantiation of 'KX022<T>::KX022(T&, uint8_t) [with T = T
+woWire; uint8_t = unsigned char]':
+C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_
+changed.ino:51:17:   required from here
+lib\KX022/KX022.h:100:12: warning: 'KX022<>::_i2c_address' will be initialized a
+fter [-Wreorder]
+uint8_t _i2c_address;
+^~~~~~~~~~~~
+lib\KX022/KX022.h:99:12: warning:   'uint8_t KX022<>::_range' [-Wreorder]
+uint8_t _range;
+^~~~~~
+In file included from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-i
+d107/src/KX022_getAcc_changed.ino:9:0:
+lib\KX022/KX022.h:91:4: warning:   when initialized here [-Wreorder]
+KX022(T &i2c_reference, uint8_t i2c_address = KX022_ADDR_H) : _i2c_address(i2c_a
+ddress), _range(KX022_RANGE_4G) { _i2c = &i2c_reference; }
+^~~~~
+*** [.pioenvs\id107\src\KX022_getAcc_changed.ino.cpp.o] Error 1
+========================== [ERROR] Took 2.28 seconds ==========================
+
+> Executing task: C:\Users\chinna\.platformio\penv\Scripts\platformio.exe run <
+
+Processing id107 (platform: nordicnrf51; board: id107; framework: arduino)
+------------------------------------------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+PLATFORM: Nordic nRF51 > id107
+SYSTEM: NRF51822 16MHz 32KB RAM (256KB Flash)
+DEBUG: CURRENT(blackmagic) EXTERNAL(blackmagic, jlink, stlink)
+Converting KX022_getAcc_changed.ino
+Warning! Cannot find an appropriate softdevice binary!
+Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF MODES: FINDER(chain) COMPATIBILITY(soft)
+Collected 7 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <Squix78 OLED library> 3.2.8
+|   |-- <SPI> 1.0
+|   |-- <Wire> 1.0
+|-- <SPI> 1.0
+|-- <arduino-BLEPeripheral>
+|   |-- <SPI> 1.0
+|-- <Wire> 1.0
+|-- <SI1143_Pulse_Prox_Sensors-master>
+|-- <KX022>
+|   |-- <Wire> 1.0
+Compiling .pioenvs\id107\src\KX022_getAcc_changed.ino.cpp.o
+Compiling .pioenvs\id107\liba3d\arduino-BLEPeripheral\BLEDescriptor.cpp.o
+Compiling .pioenvs\id107\liba3d\arduino-BLEPeripheral\BLEDevice.cpp.o
+Compiling .pioenvs\id107\liba3d\arduino-BLEPeripheral\BLEFixedLengthCharacteristic.cpp.o
+In file included from lib\squix78_OLED/SSD1306Spi.h:37:0,
+from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino:11:
+lib\squix78_OLED/OLEDDisplay.h: In member function 'void OLEDDisplay::drawStringInternal(int16_t, int16_t, char*, uint16_t, uint16_t)':
+lib\squix78_OLED/OLEDDisplay.h:807:11: warning: enumeration value 'TEXT_ALIGN_LEFT' not handled in switch [-Wswitch]
+switch (textAlignment)
+^
+lib\squix78_OLED/OLEDDisplay.h: In member function 'void OLEDDisplay::drawInternal(int16_t, int16_t, int16_t, int16_t, const char*, uint16_t, uint16_t)':
+lib\squix78_OLED/OLEDDisplay.h:1237:15: warning: unused variable 'yScreenPos' [-Wunused-variable]
+int16_t yScreenPos = yMove + yOffset;
+^~~~~~~~~~
+In file included from lib\squix78_OLED/SSD1306Spi.h:38:0,
+from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino:11:
+lib\squix78_OLED/OLEDDisplay_SPI.h: In member function 'bool OLEDDisplay::connect(uint32_t)':
+lib\squix78_OLED/OLEDDisplay_SPI.h:51:11: error: 'MOSI' was not declared in this scope
+pinMode(MOSI, OUTPUT);
+^~~~
+lib\squix78_OLED/OLEDDisplay_SPI.h:51:11: note: suggested alternative: 'M_PI'
+pinMode(MOSI, OUTPUT);
+^~~~
+M_PI
+lib\squix78_OLED/OLEDDisplay_SPI.h:52:11: error: 'SCK' was not declared in this scope
+pinMode(SCK, OUTPUT);
+^~~
+lib\squix78_OLED/OLEDDisplay_SPI.h:52:11: note: suggested alternative: 'SCB'
+pinMode(SCK, OUTPUT);
+^~~
+SCB
+In file included from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino:13:0:
+lib\SI1143_Pulse_Prox_Sensors-master/SI114.h: In member function 'uint8_t DeviceI2C::setAddress(uint8_t)':
+lib\SI1143_Pulse_Prox_Sensors-master/SI114.h:244:27: warning: no return statement in function returning non-void [-Wreturn-type]
+{ addr = me << 1; }
+^
+In file included from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino:13:0:
+lib\SI1143_Pulse_Prox_Sensors-master/SI114.h: In member function 'byte Scheduler::idle(byte)':
+lib\SI1143_Pulse_Prox_Sensors-master/SI114.h:291:47: warning: promoted ~unsigned is always non-zero [-Wsign-compare]
+byte idle(byte task) { return tasks[task] == ~0; }
+~~~~~~~~~~~~^~~~~
+C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino: In function 'void loop()':
+C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino:279:15: warning: overflow in implicit constant
+conversion [-Woverflow]
+/* Serial.print("PART: ");
+^~~~~~~~~~
+In file included from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino:9:0:
+lib\KX022/KX022.h: In instantiation of 'KX022<T>::KX022(T&, uint8_t) [with T = TwoWire; uint8_t = unsigned char]':
+C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino:51:17:   required from here
+lib\KX022/KX022.h:100:12: warning: 'KX022<>::_i2c_address' will be initialized after [-Wreorder]
+uint8_t _i2c_address;
+^~~~~~~~~~~~
+lib\KX022/KX022.h:99:12: warning:   'uint8_t KX022<>::_range' [-Wreorder]
+uint8_t _range;
+^~~~~~
+In file included from C:/Users/chinna/Documents/PlatformIO/Projects/platformio-id107/src/KX022_getAcc_changed.ino:9:0:
+lib\KX022/KX022.h:91:4: warning:   when initialized here [-Wreorder]
+KX022(T &i2c_reference, uint8_t i2c_address = KX022_ADDR_H) : _i2c_address(i2c_address), _range(KX022_RANGE_4G) { _i2c = &i2c_reference; }
+^~~~~
+*** [.pioenvs\id107\src\KX022_getAcc_changed.ino.cpp.o] Error 1
+======================================================= [ERROR] Took 2.60 seconds =======================================================
+The terminal process terminated with exit code: 1
+
+Terminal will be reused by tasks, press any key to close it.
